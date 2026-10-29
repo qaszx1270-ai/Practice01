@@ -50,8 +50,8 @@ function App() {
   ]);
 
   const [staffs, setStaffs] = useState([
-    { id: 1, name: '김철수', phone: '010-1234-5678' },
-    { id: 2, name: '이영희', phone: '010-9876-5432' },
+    { id: 1, name: '김민승', phone: '010-1234-5678' },
+    { id: 2, name: '장윤아', phone: '010-9876-5432' },
   ]);
 
   return (
@@ -64,14 +64,14 @@ function App() {
         <Route path="menus" element={<MenuIndex />}>
           <Route path="read" element={<MenuSub1 menus={menus} />}></Route>
           <Route path="create" element={<MenuSub2 setMenus={setMenus} />}></Route>
-          <Route path="update" element={<MenuSub3 />}></Route>
+          <Route path="update" element={<MenuSub3 menus={menus} setMenus={setMenus} />}></Route>
           <Route path="delete" element={<MenuSub4 menus={menus} setMenus={setMenus} />}></Route>
         </Route>
         {/* 메뉴관리 */}
         <Route path="inventory" element={<InventoryIndex />}>
           <Route path="read" element={<InventorySub1 stocks={stocks} />}></Route>
           <Route path="create" element={<InventorySub2 setStocks={setStocks} />}></Route>
-          <Route path="update" element={<></>}></Route>
+          <Route path="update" element={<InventorySub3 stock={stocks}  setStocks={setStocks} />}></Route>
           <Route path="delete" element={<InventorySub4 setStocks={setStocks} />}></Route>
         </Route>
         {/* 재고관리 */}

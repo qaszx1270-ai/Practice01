@@ -1,13 +1,15 @@
+import styles from './InventorySub1.module.css';
 
 const InventorySub1 = ({stocks}) => {
 
     return (
+        <div className={styles.container}>
         <table border={1}>
             <thead>
                 <tr>
-                    <td>id</td>
-                    <td>name</td>
-                    <td>stock</td>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>stock</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,6 +24,7 @@ const InventorySub1 = ({stocks}) => {
                 }
             </tbody>
         </table>
+        </div>
     )
 }
 

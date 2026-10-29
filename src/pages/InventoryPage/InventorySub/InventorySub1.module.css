@@ -1,0 +1,21 @@
+.container {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.container table {
+  width: 100%;
+}
+
+.container table th{
+  background-color: rgb(240, 240, 255);
+}
+.container table th, td {
+  border: 1px solid lightgray;
+  padding: 10px;
+  text-align: center;
+}
